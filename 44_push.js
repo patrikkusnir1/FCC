@@ -10,5 +10,5 @@ arr2; // ["Stimpson", "J", "cat", ["happy", "joy"]]
 
 // Push ["dog", 3] onto the end of the myArray variable.
 const myArray = [["John", 23], ["cat", 2]]
-myArray.push(["dog", 3]);
+myArray.push(["dog", 3]); // push as array
 myArray;
