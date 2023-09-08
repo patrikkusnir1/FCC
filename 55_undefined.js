@@ -1,6 +1,6 @@
 // Understanding Undefined Value returned from a Function
 
-//et sum = 0;
+//let sum = 0;
 
 function addSum(num) {
  sum = sum + num; // function without return statement
