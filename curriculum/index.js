@@ -1,9 +1,7 @@
-let message = "I love Javascript!";
-let greeting = message.slice(0, 5);
-console.log(greeting)
-let world = message.slice(7);
-console.log(world)
-let lastWord = message.slice(-4);
-console.log(lastWord)
-let language = message.slice(7, 17);
-console.log(language)
+let greeting = "Hello, world!";
+let uppercaseGreeting = greeting.toUpperCase();
+console.log(uppercaseGreeting);
+
+let shout = "I AM LEARNING JAVASCRIPT!";
+let lowercaseShout = shout.toLowerCase();
+console.log(lowercaseShout);
