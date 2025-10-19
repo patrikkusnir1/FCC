@@ -1,29 +1,22 @@
-function greet(name) {
-  console.log("Hello, " + name + "!")
+
+let globalVar = "I'm a global variable"; // ? global variable
+
+function printGlobalVar() {
+  console.log(globalVar) // * use inside the function
 }
 
-function doSomething() {
-  console.log("Doing something")
+printGlobalVar()
+
+function greet() {
+  let message = "Hello, local scope!"; // ? local variable
+  console.log(message);
 }
 
-let result = doSomething();
-console.log(result);
+greet();
+//console.log(message) //! throws an error
 
-function calculateSum(num1, num2) {
-  return num1 + num2;
+if (true) {
+  let blockVar = "I'm in a block";
+  console.log(blockVar);
 }
-
-console.log(calculateSum(3, 4));
-
-const sum = function(num1, num2) {
-  return num1 + num2;
-}
-
-console.log(sum(3, 4));
-
-function greetings(name = "Guest") {
-  console.log("Hello, " + name + "!")
-}
-
-greetings();
-greetings("Anna")
+console.log(blockVar); //! throws an error
