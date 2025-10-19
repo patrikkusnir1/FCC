@@ -1,17 +1,12 @@
 const maskEmail = email => {
   const domainPosition = email.indexOf("@");
-  const domain = email.slice(domainPosition + 1);
+  const domain = email.slice(domainPosition);
+  const name = email.slice(0, domainPosition);
+  console.log(name);
 
-  const emailToMask = email.slice(1, domainPosition);
-
-
-  const maskedPart = emailToMask.replace(emailToMask, "*");
-  const maskedPartRepeated = maskedPart.repeat(emailToMask.length - 1);
-  console.log(maskedPartRepeated);
-  console.log(maskedPartRepeated.length)
-
-  const fullEmail = email[0] + maskedPartRepeated + email.slice(domainPosition - 1);
-  return fullEmail
+  // keep first and last character, mask the middle
+  const maskedName = name[0] + "*".repeat(name.length - 2) + name[name.length - 1];
+  return maskedName + domain;
 }
 const email = "user@domain.org";
 console.log(maskEmail(email))
