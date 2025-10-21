@@ -1,12 +1,4 @@
-let chessboard = [
-  ["R", "N", "B", "Q", "K", "B", "K", "R"],
-  ["P", "P", "P", "P", "P", "P", "P", "P"],
-  [" ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " "],
-  ["p", "p", "p", "p", "p", "p", "p", "p"],
-  ["r", "n", "b", "q", "k", "b", "n", "p"]
-];
-
-console.log(chessboard[0][3])
+let fruits = ["apple", "banana", "orange", "grape"];
+let [first, ...rest, last] = fruits;
+console.log(first);
+console.log(last);
