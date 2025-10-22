@@ -33,16 +33,16 @@ const removeFirstLunch = arr => {
 }
 
 const getRandomLunch = arr => {
-  if (arr.length > 0) {
+  if (arr.length === 0) {
     console.log("No lunches available.");
   } else {
-      const randomLunch = arr[Math.floor(Math.random) * arr.length + 1];
-      console.log(`Randomly selected lunch: ${randomLunch} `);
+      const randomLunch = arr[Math.floor(Math.random() * arr.length) ];
+      console.log(`Randomly selected lunch: ${randomLunch}`);
   }
 }
 
 const showLunchMenu = (arr) => {
-  arr !== []
-    ? console.log(`Menu items: ${arr.join()}`)
-    : console.log("The menu is empty.");
+  arr.length === 0 ? console.log("The menu is empty.") : console.log(`Menu items: ${arr.join(", ")}`)
 }
+
+getRandomLunch(["pizza", "pasta", "soup"])
