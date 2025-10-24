@@ -1,8 +1,10 @@
 const person = {
-  name: "Alice",
-  age: 30,
-  city: "Wonderland"
-}
+  name: "Bob",
+  age: 25,
+  job: "Designer",
+  city: "New York"
+};
 
-let propertyName = "city";
-console.log(person[propertyName]);
+const {job, city, ...remainingProperties} = person;
+console.log(remainingProperties)
+
