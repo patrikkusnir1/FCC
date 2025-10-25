@@ -1,12 +1,7 @@
-const person = {
-  name: "Alice",
-  age: 30,
-  addresses: [
-    { type: "home", street: "123 Main St", city: "Anytown" },
-    { type: "work", street: "456 Market St", city: "Workville"}
-  ]
-};
+const originalPerson = {name: "John", age: 30};
+const copiedPerson = originalPerson;
 
-console.log(person.addresses[1].city)
+originalPerson.age = 31;
+console.log(copiedPerson.age)
 
 
