@@ -50,8 +50,25 @@ const getDifficultyLevel = cookingTime => {
   }
 }
 
-const recipe1AverageRating = getAverageRating(recipe1.averageRating);
-const recipe1TotalIngredients = getTotalIngredients(recipe1.totalIngredients)
+const recipe1AverageRating = getAverageRating(recipe1.ratings);
+const recipe1TotalIngredients = getTotalIngredients(recipe1.ingredients);
+const recipe1DifficultyLevel = getDifficultyLevel(recipe1.cookingTime);
+recipe1.averageRating = recipe1AverageRating;
+recipe1.totalIngredients = recipe1TotalIngredients;
+recipe1.difficultyLevel = recipe1DifficultyLevel;
+
+const recipe2AverageRating = getAverageRating(recipe2.ratings);
+const recipe2TotalIngredients = getTotalIngredients(recipe2.ingredients);
+const recipe2DifficultyLevel = getDifficultyLevel(recipe2.cookingTime);
+recipe2.averageRating = recipe2AverageRating;
+recipe2.totalIngredients = recipe2TotalIngredients;
+recipe2.difficultyLevel = recipe2DifficultyLevel;
+
+recipe3.averageRating = getAverageRating(recipe3.ratings);
+recipe3.totalIngredients = getTotalIngredients(recipe3.ingredients);
+recipe3.difficultyLevel = getDifficultyLevel(recipe3.cookingTime);
+
+console.log(recipes)
 
 
 
