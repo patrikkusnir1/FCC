@@ -1,10 +1,12 @@
 const person = {
-  name: "Bob",
-  age: 25,
-  job: "Designer",
-  city: "New York"
+  name: "Alice",
+  age: 30,
+  addresses: [
+    { type: "home", street: "123 Main St", city: "Anytown" },
+    { type: "work", street: "456 Market St", city: "Workville"}
+  ]
 };
 
-const {job, city, ...remainingProperties} = person;
-console.log(remainingProperties)
+console.log(person.addresses[1].city)
+
 
