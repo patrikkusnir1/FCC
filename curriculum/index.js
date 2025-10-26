@@ -1,14 +1,15 @@
-// let userInput = prompt("Please enter a number between 1 and 10");
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    continue;
+  }
+  // console.log(i)
+}
 
-// while (isNaN(userInput) || Number(userInput) < 1 || Number(userInput) > 10) {
-//   userInput = prompt("Invalid input. Please enter a number between 1 and 10.");
-// }
-
-// alert("You entered a valid number")
-
-let userInput;
-do {
-  userInput = prompt("Please enter a number between 1 and 10")
-} while (Number(userInput) < 1 || Number(userInput) > 10 )
-
-alert("You entered valid number")
+outerLoop: for (let i = 0; i < 3; i++) {
+  innerLoop: for (let j = 0; j < 3; j++) {
+    if (i === 1 & j === 1) {
+      break outerLoop;
+    }
+    console.log(`i: ${i}, j: ${j}`)
+  }
+}
