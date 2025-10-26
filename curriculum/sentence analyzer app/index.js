@@ -47,4 +47,5 @@ const getWordCount = sentence => {
   return sentence.trim() === "" ? 0 : array.length
 }
 
-console.log(getWordCount("Hello"))
+const wordCount = getWordCount("Coding is fun ahahaha");
+console.log(`Word Count: ${wordCount}`)
