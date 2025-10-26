@@ -1,6 +1,3 @@
-function createPerson(name, age) {
-  return {name, age}
+for (let i = 0; i < 5; i++) {
+  console.log(i)
 }
-
-let person = createPerson("Charlie", 35);
-console.log(person)
