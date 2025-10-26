@@ -1,9 +1,46 @@
-const chunkArrayInGroups = (arr, chunkSize) => {
-  let chunk = [];
-  for (let i = 0; i < arr.length; i += chunkSize) {
-    chunk.push(arr.slice(i, i + chunkSize));
+let contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "04873465643",
+    likes: ["Intriguing Cases","Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+const lookUpProfile = (name, prop) => {
+  let foundProp = "";
+  for (const contact of contacts) {
+      if (name !== contact.firstName) {
+        continue;
+      } else {
+        foundProp = contact[prop];
+        if (foundProp === undefined) {
+          return "No such property"
+        }
+        return foundProp;
+      };
   }
-  return chunk;
+  if (foundProp === "") {
+    return "No such contact"
+  }
 }
 
-// chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2);
+console.log(lookUpProfile("Akira", "not like"));
