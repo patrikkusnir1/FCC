@@ -26,21 +26,16 @@ let contacts = [
 ];
 
 const lookUpProfile = (name, prop) => {
-  let foundProp = "";
   for (const contact of contacts) {
-      if (name !== contact.firstName) {
-        continue;
+    if (contact.firstName === name ) {
+      if (contact.hasOwnProperty(prop)) {
+        return contact[prop]
       } else {
-        foundProp = contact[prop];
-        if (foundProp === undefined) {
-          return "No such property"
-        }
-        return foundProp;
-      };
+        return "No such property";
+      }
+    }
   }
-  if (foundProp === "") {
-    return "No such contact"
-  }
+  return "No such contact";
 }
 
-console.log(lookUpProfile("Akira", "not like"));
+console.log(lookUpProfile("Akira", "likes"));
