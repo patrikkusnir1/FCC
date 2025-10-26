@@ -1,20 +1,29 @@
-const numbers = [1, 2, 3, 4, 5];
-for (let num of numbers) {
-  // console.log(num)
-  num = num + 1;
+const fruit = {
+  name: "apple",
+  color: "red",
+  price: 0.99
+};
+
+const person = {
+  name: "John",
+  age: 30,
+  address: {
+    street: "123 Main St",
+    city: "Anytown",
+    state: "CA"
+  }
+};
+
+function isObject(obj) {
+  return typeof obj === "object" && !Array.isArray(obj) && obj !== null;
 }
 
-// const str = "freeCodeCamp";
-// for (let char of str) {
-//   console.log(char)
-// }
-
-const people = [
-  { name: "John", age: 30 },
-  { name: "Jane", age: 25 },
-  { name: "Jim", age: 40 }
-];
-
-for (const person of people) {
-  console.log(`${person.name} is ${person.age} old.`)
+for (const prop in person) {
+  if (isObject(person[prop])) {
+    for (const nestedProp in person[prop]) {
+      console.log(person[prop][nestedProp])
+    }
+  } else {
+    console.log(person[prop])
+  }
 }
