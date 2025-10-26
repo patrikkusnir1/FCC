@@ -1,29 +1,14 @@
-const fruit = {
-  name: "apple",
-  color: "red",
-  price: 0.99
-};
+// let userInput = prompt("Please enter a number between 1 and 10");
 
-const person = {
-  name: "John",
-  age: 30,
-  address: {
-    street: "123 Main St",
-    city: "Anytown",
-    state: "CA"
-  }
-};
+// while (isNaN(userInput) || Number(userInput) < 1 || Number(userInput) > 10) {
+//   userInput = prompt("Invalid input. Please enter a number between 1 and 10.");
+// }
 
-function isObject(obj) {
-  return typeof obj === "object" && !Array.isArray(obj) && obj !== null;
-}
+// alert("You entered a valid number")
 
-for (const prop in person) {
-  if (isObject(person[prop])) {
-    for (const nestedProp in person[prop]) {
-      console.log(person[prop][nestedProp])
-    }
-  } else {
-    console.log(person[prop])
-  }
-}
+let userInput;
+do {
+  userInput = prompt("Please enter a number between 1 and 10")
+} while (Number(userInput) < 1 || Number(userInput) > 10 )
+
+alert("You entered valid number")
