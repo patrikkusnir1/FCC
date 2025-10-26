@@ -14,4 +14,4 @@ const mutation = array => {
 
 }
 
-console.log(mutation(["Hello", "Hello"]))
+console.log(mutation(["Hello", "Hel"]));
