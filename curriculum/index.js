@@ -1,73 +1,16 @@
-/* Boolean - is, has, can */
-let isLoading = true;
-let hasPermission = false;
-let canEdit = true;
+const fruits = ["apple", "banana", "orange"];
+// console.log(fruits.length) // 3
 
-// functions - start with verb, indicate what function does
-function getUserData(){
-  /* ... */
-}
-function calculateTotal() {
-  /* ... */
-}
+const sparseArray = [1, , , 4];
+// console.log(sparseArray.length) // 4
 
-function validateInput(){
-  /* ... */
-}
+const emptyArray = new Array(5);
+console.log(emptyArray.length); // 5
+console.log(emptyArray) // prazdne (5)
 
-// functions that return boolean - predicates - also is, has, can
-function isValidEmail(email){
-  /* ... */
-}
+const fixedLengthArray = Array.from({length: 5});
+console.log(fixedLengthArray.length) // 5 
+console.log(fixedLengthArray) // [undefined, undefined, undefined, undefined, undefined] 
 
-function hasRequiredFields(form) {
-  /* ... */
-}
-
-// functions that retrieve data - word get
-
-function getProductDetails(productId) {
-  /* ... */
-}
-
-function getUserProfile(userId) {
-  /* ... */
-}
-
-// functions that set data - use word set
-
-function setUserPreferences(preferences) {
-  /* ... */
-}
-
-function setPageTitle(title) {
-  /* ... */
-}
-
-// event handler functions - prefix handle or handler as suffix
-
-function handleClick() {
-  /* ... */
-}
-
-function onSubmit() {
-  /* ... */
-}
-
-function keyPressHandler() {
-  /* ... */
-}
-
-// iterables in loops - letter i,j or k. Difficult one can be words
-for (let i = 0; i < array.length; i++) {
-  /* ... */
-}
-
-for (let studentIndex = 0; studentIndex < students.length; studentIndex++) {
-  /* ... */
-}
-
-// array names - plurals nouns
-const colors = ["red", "green", "blue"];
-const userNames = ["Alice", "Bob", "Charlie"]
-
+const filledArray = new Array(3).fill(0); // fill with default value = 0
+console.log(filledArray); // [0, 0, 0]
