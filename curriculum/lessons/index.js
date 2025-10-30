@@ -1,9 +1,9 @@
-function doSomething(x) {
-	return x + z
+function createLargeArray() {
+	let largeArray = new Array(1000000);
+	return function() {
+		console.log(largeArray.length)
+	}
 }
 
-function logFunction(
-	argument1,
-	argument2,
-	argument3,
-) {return argument1 + argument2 + argument3;}
+let printArraylength = createLargeArray();
+printArraylength()
